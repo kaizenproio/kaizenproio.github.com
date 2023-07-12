@@ -3,7 +3,6 @@
 <head>
     <title>Your Company Name</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,7 +16,7 @@
     <section id="home">
         <h1>Innovation in Motion</h1>
         <p>We're building the future of the collision repair industry. Stay tuned for what's coming.</p>
-        <button>Stay Updated</button>
+        <button id="open-modal">Stay Updated</button>
     </section>
     <section id="about">
         <h2>About Us</h2>
@@ -26,11 +25,30 @@
     <section id="contact">
         <h2>Stay in Touch</h2>
         <p>Join our mailing list to stay informed about our progress. We promise to only send the good stuff.</p>
-        <button>Join Now</button>
+        <button id="open-modal-2">Join Now</button>
     </section>
     <footer>
         <a href="#privacy">Privacy Policy</a>
         <a href="#terms">Terms of Service</a>
     </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xgejedop" method="post">
+                <fieldset id="fs-frm-inputs">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

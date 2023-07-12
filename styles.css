@@ -99,3 +99,77 @@ footer a {
     color: #fcfcfc;
     text-decoration: none;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    position: relative; /* Added to position the close button relative to this container */
+    background-color: #fcfcfc;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #F0F0F0;
+    width: 50%; /* Reduced from 80% to 50% */
+    max-width: 500px; /* Maximum width of 500px */
+    font-family: 'Montserrat', sans-serif;
+    color: #003366;
+}
+
+/* The Close Button */
+.close {
+    position: absolute; /* Positioned absolutely within the modal-content container */
+    top: -10px; /* Positioned above the container */
+    right: 3px; /* Positioned to the right of the container */
+    color: #003366;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #6699cc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styles */
+#fs-frm input,
+#fs-frm textarea {
+    width: 100%;
+    box-sizing: border-box; /* Includes padding and border in the total width */
+    border: 1px solid #003366;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#fs-frm input[type="submit"] {
+    width: 99%;
+    box-sizing: border-box; /* Includes padding and border in the total width */
+    background-color: #6699cc;
+    border: none;
+    color: #fcfcfc;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#fs-frm input[type="submit"]:hover {
+    background-color: #003366;
+}
