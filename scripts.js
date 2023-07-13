@@ -8,10 +8,6 @@ var btn2 = document.getElementById("open-modal-2");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Get the hamburger menu and navbar
-var hamburger = document.getElementById("hamburger");
-var navbar = document.getElementById("navbar");
-
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -34,8 +30,20 @@ window.onclick = function(event) {
 }
 
 // Switch to hamburger menu on smaller screens
+var hamburger = document.getElementById("hamburger");
+var navbar = document.getElementById("navbar");
+
 hamburger.onclick = function() {
-  if (navbar.style.display === "none") {
+  if (navbar.style.display === "block") {
+    navbar.style.display = "none";
+  } else {
+    navbar.style.display = "block";
+  }
+}
+
+// Display navigation bar if window is resized to a larger size
+window.onresize = function() {
+  if (window.innerWidth > 768) {
     navbar.style.display = "block";
   } else {
     navbar.style.display = "none";
