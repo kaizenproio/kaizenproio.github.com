@@ -8,6 +8,10 @@ var btn2 = document.getElementById("open-modal-2");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+// Get the hamburger menu and navbar
+var hamburger = document.getElementById("hamburger");
+var navbar = document.getElementById("navbar");
+
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -26,5 +30,14 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+// Switch to hamburger menu on smaller screens
+hamburger.onclick = function() {
+  if (navbar.style.display === "none") {
+    navbar.style.display = "block";
+  } else {
+    navbar.style.display = "none";
   }
 }

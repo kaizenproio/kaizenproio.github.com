@@ -13,6 +13,7 @@ header {
     top: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: #F0F0F0;
     color: #003366;
@@ -25,6 +26,10 @@ header {
     width: auto;
 }
 
+nav {
+    display: flex;
+}
+
 nav a {
     margin: 0 10px;
     color: #003366;
@@ -34,6 +39,61 @@ nav a {
 
 nav a:hover {
     color: #6699cc;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 2rem;
+    height: 0.25rem;
+    background: #003366;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .modal-content {
+        width: 90%; 
+        max-width: 400px;
+        margin-top: 20%; 
+    }
+
+    #home h1 {
+        font-size: 1.5em;
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
 }
 
 #home {
@@ -104,7 +164,7 @@ footer a {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2001; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -155,7 +215,7 @@ footer a {
 }
 
 #fs-frm input[type="submit"] {
-    width: 99%;
+    width: 100%;
     box-sizing: border-box; /* Includes padding and border in the total width */
     background-color: #6699cc;
     border: none;
