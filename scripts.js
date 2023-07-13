@@ -49,3 +49,14 @@ window.onresize = function() {
     navbar.style.display = "none";
   }
 }
+
+// Listen for clicks on the entire document
+document.addEventListener('click', function(event) {
+  // Check if the click was within the navbar or the hamburger icon
+  var isClickInside = navbar.contains(event.target) || hamburger.contains(event.target);
+
+  // If the click was outside the navbar and hamburger icon, and the navbar is currently open, close it
+  if (!isClickInside && navbar.style.display === "block") {
+    navbar.style.display = "none";
+  }
+});
